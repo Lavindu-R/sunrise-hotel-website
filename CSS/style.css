@@ -1,0 +1,1294 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Header container */
+  header {
+    position: sticky;   /* my first ever sticky header :D */
+    top: 0;
+    width: 100%;
+    background-color: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem 1rem;
+    z-index: 1000; /* to stays above other elements */
+    margin-bottom: 15px;
+  }
+
+  body {
+    background-color:#f8f4ec ;
+    font-family: 'Playfair Display', sans-serif;
+}
+
+  p {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.7;
+}
+
+  .logo {
+    display: flex;
+    height: auto;
+    margin: 0 auto; 
+    flex-direction: column;
+    align-items: center;
+ }
+  
+  .logo img {
+    max-height: 100px;
+    margin-bottom: 1px;
+    margin-left: 300px;
+    height: auto;
+    width: auto;
+  }
+  
+  
+  /* Navigatin ul */
+
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* center its children */
+    align-items: center;     /* vertically center if needed */
+  }
+
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffffff;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: #EAE0C8; 
+  }
+
+  /* end of header section */
+
+
+/* start ofBanner section */
+.banner {
+        height: 790px;
+        width: 80%;
+        border-radius: 26px;
+        overflow: hidden;              /* to rounded corners apply to background */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #ffffff;
+        position: relative;
+        margin: 0 auto;               
+        background-size: cover; 
+        background-position: center;
+        transition: background-image 1s ease-in-out; /* Smooth transition for background image change in JS aimation */
+        padding-top: 50px;
+}
+
+
+/* to add a wrapper gradeint, for get more visibility on banner texts */    
+.banner::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(102, 100, 71,0.3);
+}   
+  
+.banner-text {
+  position: relative;
+  z-index: 1;
+}
+  
+.banner-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 6rem;
+  margin-bottom: 0.rem;
+}
+
+  
+.banner-text:hover {
+  color: #FFD500; /* to get a gold color while hovering ,,,should changed it later!!!*/
+}
+  
+  .banner-text p {
+    font-size: 1.5rem;
+  }
+
+/* Why Us Section */
+
+.why-us {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: #efe8d8;
+  padding: 80px 60px;
+  margin-top: 50px;
+  gap: 2rem;
+}
+
+/* Left Text */
+.why-us-text {
+  flex: 1.5;
+  padding-left: 140px;
+  padding-top: 120px;
+  text-align: left;
+}
+
+
+.why-us h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+
+.why-us p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #666;
+  line-height: 1.8;
+}
+
+/* Right Image Container */
+.why-us-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+
+.why-us-image img {
+  width: 100%;
+  max-width: 400px;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+  
+/* Featured Rooms */
+.featured-rooms {
+  padding: 5rem 3rem;
+  text-align: center;
+}
+
+.featured-rooms h2{
+  font-size: 2rem;
+  color: #000;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.rooms-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 5rem;
+}
+
+.room {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  width: 350px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.room:hover {
+  transform: scale(1.05); /* to slightly enlarge the room card */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  background-color: #f7f7f7; /* Light background on hover */
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.room img {
+  width: 100%;
+  height: 400px; 
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.room h3 {
+  margin-top: 1rem;
+  color: #13462F;
+  margin-bottom: 10px;
+}
+
+.room p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+
+  
+/* Special Offers Section */
+.special-offers {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 4rem 3rem;
+  text-align: center;
+  flex-wrap: wrap;
+  background-color: #EAE0C6;
+  
+}
+/* Dark gradient for the heading */
+.special-offers-heading {
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  color: #000;
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+
+/* Offer Card */
+.offer {
+  width: 400px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Smooth zoom effect */
+  margin-bottom: 60px;
+}
+
+/* Hover effect for the entire offer card */
+.offer:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+/* Image styles */
+.offer-image img {
+  width: 100%;
+  height: 30rem;
+  object-fit: cover;
+  transition: opacity 0.3s ease; /* Smooth fade effect for image */
+}
+
+/* Dark gradient overlay */
+.offer-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay with transparency */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease;
+}
+
+/* Show the dark gradient on hover */
+.offer:hover .offer-image::before {
+  opacity: 1;
+}
+
+/* Initially hide the text */
+.offer-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 1.4rem;  
+  margin-bottom: 10px;
+  line-height: 1.6;
+  transform: translate(-50%, -50%);
+  color: white;
+  opacity: 0;
+  text-align: center;
+  transition: opacity 0.3s ease; /* Fade-in text on hover */
+}
+
+/* Show text when hovering */
+.offer:hover .offer-text {
+  opacity: 1; 
+}
+
+/* Styling for the text */
+.offer-text h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.offer-text p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.offer-price {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #D4AF37; 
+  background-color: rgba(0, 0, 0, 0.6); /* Dark background to make text stand out */
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+
+  /* start of footer */
+  footer {
+    background-color: #000000; 
+    color: #ffffff;           
+    padding: 2rem 1rem;
+  }
+  
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .footer-section h3 {
+    margin-bottom: 0.8rem;
+    color: #ffffff; 
+  }
+  
+  .footer-section p, 
+  .footer-section a, 
+  .footer-section li {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .social-links {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .social-links li {
+    margin: 0.3rem 0;
+  }
+  
+  .social-links a {
+    color: #F4F3E9;
+    text-decoration: none;
+  }
+  
+  .social-links a:hover {
+    color: #D4AF37;
+  }
+  
+  /* Forms inside footer */
+  footer form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  footer input, 
+  footer textarea {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  footer button {
+    background: #ffffff; 
+    color: #13462F;      
+    padding: 0.6rem;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  
+  footer button:hover {
+    background: #D4AF37;
+    color: #13462F;
+  }
+  
+  /* Bottom copyright bar */
+  .footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    border-top: 1px solid #ffffff;
+    padding-top: 1rem;
+  }
+
+  
+  
+  
+  
+/* css for room page */
+
+  /* Rooms Section */
+
+.rooms-banner {
+        height: 790px;
+        width: 80%;
+        border-radius: 26px;
+        overflow: hidden;           
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: #ffffff;
+        position: relative;
+        margin: 0 auto;                /* center the banner itself */
+        background-image:url("../images/rbanner.jpg");
+        background-size: cover; /* Ensure background images cover the area */
+        background-position: center; /* Center the background image */
+        padding-top: 50px;
+}
+    
+
+.rooms-banner::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(74, 70, 72, 0.2);
+}   
+    
+  
+.rooms-banner-text {
+  position: relative;
+  z-index: 1;
+}
+  
+.rooms-banner-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 6rem;
+  margin-bottom: 0.rem;
+}
+
+  
+.rooms-banner-text:hover {
+color: #FFD500;
+}
+  
+.rooms-banner-text p {
+font-size: 1.5rem;
+}
+
+/* Why Us Section */
+.why-our-rooms {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: #efe8d8;
+  padding: 80px 60px;
+  margin-top: 50px;
+  gap: 2rem;
+}
+
+/* Left Text */
+.why-our-rooms-text {
+  flex: 1.5;
+  padding-left: 140px;
+  padding-top: 120px;
+  text-align: left;
+}
+
+
+.why-our-rooms h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+
+.why-our-rooms p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #666;
+  line-height: 1.8;
+}
+
+/* Right Image Container */
+.why-our-rooms-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+
+.why-our-rooms-image img {
+  width: 100%;
+  max-width: 400px;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+.pg2_rooms {
+    padding: 30px 0;
+    text-align: center;
+    margin-top: 30px;
+    background-color: #f8f4ec;
+}
+
+.pg2_rooms-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto;
+    padding-top: 3rem;
+    width: 80%;
+}
+
+.pg2_rooms h2 {
+  font-size: 2.2rem;
+  color: #000;
+  margin-bottom: 1rem;
+
+}
+
+.pg2_room p{
+  line-height: 1.5rem;
+}
+
+
+.pg2_room {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 30%;
+    max-width: 75%;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    margin-bottom: 2rem;
+    
+}
+
+
+.pg2_room:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: #f7f7f7; 
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.pg2_room img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 2rem;
+}
+
+.pg2_room h3 {
+    margin-bottom: 10px;
+    color: #13462F;
+}
+
+.pg2_room .price {
+    margin-top: 20px;
+    color: #D4AF37;
+    font-weight: bold;
+}
+
+.pg2_suite-room {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 800px; 
+    margin: 20px auto;
+    padding: 1rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    margin-top: 2rem;
+}
+
+/* Hover effect for suite room */
+.pg2_suite-room:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    background-color: #f7f7f7;
+    cursor: pointer;
+}
+
+.pg2_suite-room img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 2rem;
+}
+
+.pg2_suite-room h3 {
+    margin-bottom: 10px;
+    color: #13462F;
+}
+
+.pg2_suite_room p {
+  line-height: 1.5rem;
+}
+
+.pg2_suite-room .price {
+    margin-top: 20px;
+    color: #D4AF37;
+    font-weight: bold;
+}
+
+
+
+
+.book-now-btn {
+  background-color: #13462F;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.book-now-btn:hover {
+  background-color: #D4AF37;
+}
+
+/* Facilities Section */
+.facilities {
+  padding: 4rem 3rem;
+  text-align: center;
+  background-color: #EBE0C6 ;
+  padding-bottom: 180px;
+
+}
+
+.facilities h2{
+  font-size: 2.2rem;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.facilities-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  justify-content: center;
+  gap: 2rem;
+    
+}
+
+
+.facility {
+  width: 300px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.facility img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.facility h3 {
+  margin: 1rem 0;
+  color: #13462F;
+}
+
+.facility p {
+  line-height: 1.5rem;
+}
+ 
+
+
+
+
+/* Dinning and services */
+
+.dinning-banner {
+  height: 790px;
+  width: 80%;
+  border-radius: 26px;
+  overflow: hidden;            
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  margin: 0 auto;                
+  background-size: cover; 
+  background-position: center;
+  background-image: url("../images/main dine hall.jpg");
+  padding-top: 50px;
+}
+
+.dinning-banner::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(74, 70, 72, 0.3);
+} 
+
+.dinning-banner-text {
+position: relative;
+z-index: 1;
+}
+
+.dinning-banner-text h1 {
+font-family: 'Playfair Display', serif;
+font-size: 6rem;
+margin-bottom: 0.rem;
+}
+
+
+.dinning-banner-text:hover {
+color: #FFD500; 
+}
+
+.dinning-banner-text p {
+font-size: 1.5rem;
+}
+
+
+/* Why Dine With Us Section */
+.why-dine-with-us {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: #efe8d8;
+  padding: 80px 60px;
+  margin-top: 50px;
+  gap: 2rem;
+}
+
+/* Left Text */
+.why-dine-with-us-text {
+  flex: 1.5;
+  padding-left: 140px;
+  padding-top: 120px;
+  text-align: left;
+}
+
+
+.why-dine-with-us h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+
+.why-dine-with-us p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #666;
+  line-height: 1.8;
+}
+
+/* Right Image Container */
+.why-dine-with-us-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+
+.why-dine-with-us-image img {
+  width: 100%;
+  max-width: 400px;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.menu-highlights {
+  padding: 4rem 2rem;
+  background-color: #f8f4ec; /* light cream background */
+  text-align: center;
+}
+
+.menu-highlights h2 {
+  font-size: 2.2rem;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.menu-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.menu-item {
+  background: #fff;
+  border-radius: 8px;
+  width: 280px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+  transform: scale(1.05);
+}
+
+.menu-item img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.menu-item h3 {
+  margin-top: 1rem;
+  color: #13462F;
+}
+
+.menu-item p {
+  font-size: 0.95rem;
+  margin-top: 20px;
+  color: #444;
+}
+
+.menu-item .price {
+  color: #D4AF37;
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+
+/* services */
+
+.services {
+  padding: 4rem 3rem;
+  text-align: center;
+  background-color: #EBE0C6 ;
+  padding-bottom: 180px;
+
+}
+
+.services h2{
+  font-size: 2rem;
+  color: #000;
+  padding-bottom: 20px;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 70px;
+}
+
+
+.service {
+  width: 300px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.service img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.service h3 {
+  margin: 1rem 0;
+  color: #13462F;
+}
+
+
+.service p {
+  line-height: 1.5rem;
+}
+
+
+
+
+
+
+/* Testimonial Page */
+
+.testimonials-banner {
+  height: 790px;
+  width: 80%;
+  border-radius: 26px;
+  overflow: hidden;             
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  margin: 0 auto;              
+  background-size: cover; 
+  background-position: center;
+  background-image: url("../images/testimonial banner.jpg");
+  padding-top: 50px;
+}
+
+
+.testimonials-banner::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(74, 70, 72, 0.1);
+}
+
+
+.testimonials-text {
+  position: relative;
+  z-index: 1;
+}
+  
+.testimonials-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 6rem;
+  margin-bottom: 0.rem;
+}
+  
+  
+.testimonials-text:hover {
+  color: #FFD500;
+}
+  
+.testimonials-text p {
+  font-size: 1.5rem;
+}
+  
+  
+/* Why Stay With Us Section */
+
+.why-stay-with-us {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  background-color: #efe8d8;
+  padding: 80px 60px;
+  margin-top: 50px;
+  gap: 2rem;
+}
+
+/* Left Text */
+.why-stay-with-us-text {
+  flex: 1.5;
+  padding-left: 140px;
+  padding-top: 120px;
+  text-align: left;
+}
+
+
+.why-stay-with-us h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+
+.why-stay-with-us p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #666;
+  line-height: 1.8;
+}
+
+/* Right Image Container */
+.why-stay-with-us-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+
+.why-stay-with-us-image img {
+  width: 100%;
+  max-width: 400px;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.testimonials {
+  padding: 4rem 2rem;
+  background-color: #f8f4ec;
+  text-align: center;
+  margin-top: 50px;
+    
+}
+  
+.testimonials h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #13462F;
+}
+
+.testimonials p {
+  margin-bottom: 60px;
+  line-height: 1.5rem;
+}
+
+.testimonials-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.testimonial {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem auto;
+  max-width: 33%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  text-align: left;
+}
+  
+.testimonial h3 {
+  color: #13462F;
+  margin-bottom: 0.5rem;
+}
+  
+.testimonial .date {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 1rem;
+}
+  
+.testimonial .review {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+
+}
+  
+.testimonial video {
+  display: block;
+  margin: 0.5rem 0;
+  max-width: 100%;
+}
+
+.testimonial audio {
+  display: block;
+  margin: 0.5rem 0;
+  margin-top: 2rem;
+  max-width: 100%;
+}
+  
+.testimonial label {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.stay-status {
+  font-weight: bold;
+  color: #13462F;
+}
+  
+.stay-status input {
+  transform: scale(1.2);
+  margin-right: 8px;
+  align-items: center;
+}
+
+
+/* contact us */
+
+  .contact-us {
+    padding: 4rem 2rem;
+    background-color: #efe8d8;
+    text-align: center;
+  }
+  
+  .contact-us h2 {
+    font-size: 2.2rem;
+    color: #13462F;
+    margin-bottom: 1rem;
+  }
+  
+  .contact-us p {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 2rem;
+  }
+  
+  .luxury-contact {
+    text-align: center;
+    background-color: #f8f4ec;
+    padding: 4rem 2rem;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .luxury-contact h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #13462F;
+  }
+  
+  .luxury-contact p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 8rem;
+
+  }
+  
+  .contact-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+    text-align: left;
+    max-width: 1100px;
+    margin: auto;
+  }
+  
+  .contact-details, .contact-tollfree {
+    flex: 1 1 450px;
+  }
+  
+  .contact-details h3, 
+  .contact-tollfree h3 {
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    color: #13462F;
+  }
+  
+  .contact-details p, 
+  .contact-tollfree p, 
+  .region-list li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.8rem;
+  }
+  
+  .region-list {
+    list-style: none;
+    padding: 0;
+    border-top: 1px solid #ccc;
+  }
+  
+  .region-list li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  .luxury-btn {
+    margin-top: 1rem;
+    padding: 0.8rem 1.2rem;
+    border: 1px solid #13462F;
+    background: transparent;
+    color: #13462F;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .luxury-btn:hover {
+    background: #13462F;
+    color: #fff;
+  }
+  
+  .note {
+    font-size: 6px;
+    color: #000;
+    margin-top: 1rem;
+    font-style: italic;
+    opacity: 60%;
+  }
+  
+
+
+  .contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 9.5rem;
+  }
+  
+  .contact-info, 
+  .contact-form {
+    flex: 1 1 400px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    text-align: left;
+  }
+  
+  .contact-info h3, 
+  .contact-form h3 {
+    margin-bottom: 1rem;
+    color: #13462F;
+  }
+
+  .contact-info p, 
+  .contact-form p {
+    margin-bottom: 1rem;
+    color: #000;
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .contact-form input, 
+  .contact-form textarea {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #13462F;
+    box-shadow: 0 0 5px rgba(19, 70, 47, 0.4);
+  }
+  
+  .contact-form button {
+    background: #13462F;
+    color: #fff;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background: #D4AF37;
+    color: #13462F;
+  }
